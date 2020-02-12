@@ -19,6 +19,8 @@
     <modules>
         <!--这个是对应的文件夹名字对应-->
         <module>hello-seata-dependencies</module>
+        <module>hello-seata-commons</module>
+        <module>hello-seata-provider</module>
     </modules>
 
     <properties>
