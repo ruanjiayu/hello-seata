@@ -1,0 +1,29 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: hello-seata-provider-transaction
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.10.18:8848
+    alibaba:
+      seata:
+        # 自定义事务组名称 tx_group，需要与服务端一致
+        tx-service-group: tx-group
+
+dubbo:
+  scan:
+    base-packages: com.fun.uncle.hello.seata.provider.service
+  protocol:
+    name: dubbo
+    port: -1
+  provider:
+    loadbalance: roundrobin
+  registry:
+    address: nacos://192.168.10.18:8848
+
+#logging:
+#  level:
+#    com.fun.uncle.hello.seata.provider.mapper: debug
+#    io.seata.core: debug

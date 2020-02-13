@@ -2,24 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.fun.uncle</groupId>
-        <artifactId>hello-seata</artifactId>
+        <artifactId>hello-seata-provider</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-
-    <artifactId>hello-seata-provider</artifactId>
-    <packaging>pom</packaging>
-    <url>http://www.fununcle.top</url>
-
+    <artifactId>provider-order-api</artifactId>
+    <packaging>jar</packaging>
+    <url>http://www.funtl.com</url>
+    <inceptionYear>2018-Now</inceptionYear>
     <licenses>
         <license>
             <name>Apache 2.0</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
-
     <developers>
         <developer>
             <id>ruanjiayu</id>
@@ -28,12 +25,17 @@
         </developer>
     </developers>
 
-    <modules>
-        <module>provider-order-api</module>
-        <module>provider-order-service</module>
-        <module>provider-order-item-api</module>
-        <module>provider-order-item-service</module>
-        <module>provider-transaction-api</module>
-        <module>provider-transaction-service</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
 </project>
